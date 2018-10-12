@@ -1,25 +1,19 @@
 <div id="app-title">
-  <h1>Header</h1>
-  <h2>Search</h2>
+  <h1>Pokemon Rescue</h1>
+  <h2>Search for your favorite Pokemon by their name, or their type!</h2>
 </div>
 
-<!--<div class="container">-->
-  <!--<app-search></app-search>-->
-<!--</div>-->
-
 <div class="container">
-  <input
-    (keyup)="searchTerm$.next($event.target.value)">
+    <input id="search-bar" placeholder="Search here" (keyup)="searchTerm$.next($event.target.value)">
 
-  <ul *ngIf="results">
-    <li *ngFor="let result of results | slice:0:9">
-      <a href="{{ result.latest }}" target="_blank">
-        {{ result.name }}
-      </a>
-    </li>
-  </ul>
+  <div id="search-results">
+    <div class="search-result" *ngFor="let key of results">
+      {{resultValues[key]}}
+    </div>
+  </div>
+
 </div>
 
 <footer id="footer">
-  <p id="copyright">Copyright(Not Really) Alexander Vaughan 20XX</p>
+  <p id="copyright">Copyright(Not Really) Alexander Vaughan {{currentYear}}</p>
 </footer>

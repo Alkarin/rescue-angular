@@ -10,7 +10,9 @@ import {SearchService} from "./search.service";
 })
 export class AppComponent {
   results: Object;
+  resultValues: Object;
   searchTerm$ = new Subject<string>();
+  currentYear = new Date().getFullYear();
 
   constructor(private searchService: SearchService) {
 
@@ -24,8 +26,14 @@ export class AppComponent {
     if(JSON.stringify(response) === "\"No Results\""){
       // Do nothing
       console.log("There were no results");
+      this.results = null;
+      this.resultValues = null;
     } else {
       console.log("RESPONSE:" + JSON.stringify(response));
+
+      this.results = Object.keys(response);
+      this.resultValues = Object.values(response);
+      console.log(this.results);
     }
 
   }
