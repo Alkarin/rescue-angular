@@ -24,23 +24,19 @@ export class AppComponent {
 
   private handleResponse(response) {
     if(JSON.stringify(response) === "\"No Results\""){
-      // Do nothing
-      console.log("There were no results");
+      // console.log("There were no results");
+
+      // Clear Search Results
       this.results = null;
       this.resultValues = null;
     } else {
-      console.log("RESPONSE:" + JSON.stringify(response));
-
+      // console.log("RESPONSE:" + JSON.stringify(response));
       this.results = Object.keys(response);
       this.resultValues = Object.values(response);
-      console.log(this.results);
     }
-
   }
 
   private handleResponseError(error) {
     console.log("ERROR:" + JSON.stringify(error));
   }
-
-
 }

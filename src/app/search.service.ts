@@ -20,8 +20,6 @@ export class SearchService {
   }
 
   searchEntries(term) {
-    console.log(term);
-    console.log(this.serverUrl+term);
     return this.httpClient.get(this.serverUrl+term);
   }
 }
