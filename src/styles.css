@@ -133,6 +133,10 @@ app-root {
 
 #search-results {
   text-align: center;
+  overflow-y: scroll;
+  height: 300px;
+  margin-right: -50px;
+  padding-right: 50px;
 }
 
 .search-result {
