@@ -87,7 +87,6 @@ app-root {
   margin: auto;
   margin-bottom: 5%;
   background-color: #FFF;
-//box-shadow: 8px 8px 20px 0px #888888;
   box-shadow: 6px 6px 20px -10px #888888;
   height: 100%;
   padding: 0px;
@@ -103,13 +102,6 @@ app-root {
   font-size: 24px;
 }
 
-#app-title h2 {
-  font-size: 15px;
-  font-weight: 200;
-  color: #333333;
-  margin-top: 0px;
-}
-
 .row {
   width: 100%;
   margin: auto;
@@ -122,7 +114,7 @@ app-root {
 #container-title {
   text-align: center;
   margin-top: 3%;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 200;
   color: #616161;
 }
@@ -135,8 +127,6 @@ app-root {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
-
-
 }
 
 #search-results {
@@ -154,7 +144,6 @@ app-root {
   padding: 5px;
   border: 0px solid #4174C7;
   border-top: 0px;
-  border-radius: 0px;
 }
 
 .search-result:hover {
