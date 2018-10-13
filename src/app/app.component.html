@@ -1,9 +1,9 @@
 <div id="app-title">
   <h1>Pokemon Rescue</h1>
-  <h2>Search for your favorite Pokemon by their name, or their type!</h2>
 </div>
 
 <div class="container">
+  <h2 id="container-title">Search for your favorite Pokemon by their name, or their type!</h2>
     <input id="search-bar" placeholder="Search here" (keyup)="searchTerm$.next($event.target.value)">
 
   <div id="search-results">
